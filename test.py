@@ -1,3 +1,5 @@
+import random
+clas = ["Gojo","Kamo","Zenin","Yuji","Fushiguro"]
 print('---------------RPG BASICO---------------')
 print('Quer jogar?')
 print('Sim ou Não?')
@@ -19,8 +21,18 @@ while True:
         print('Iniciando')
     elif opcoes =='2':
         print('Entrando na Customização...')
+        print("-------MENU DE CUSTOMIZAÇÃO--------")
+        print("1- Roletar Clã")
+        print("2- Roletar Inata")
+        print("3- Voltar pro Menu")
+        opc = input("Escolha uma opção: ")
+        if opc == 3:
+            print("Voltando...")
+        continue
+
     elif opcoes =='3':
         print('ok até a proxima...')
 
     else:
         print("Opção inválida.")
+    break
