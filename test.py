@@ -1,5 +1,6 @@
 import random
-clas = ["Gojo","Kamo","Zenin","Yuji","Fushiguro"]
+clas = ["Gojo","Sukuna","Zenin","Yuji","Nenhum"]
+inatas = ["Ilimitado","Santuario","10 sombras","Restrição Celestial","Manipulação De espiritos"]
 print('---------------RPG BASICO---------------')
 print('Quer jogar?')
 print('Sim ou Não?')
@@ -26,9 +27,14 @@ while True:
         print("2- Roletar Inata")
         print("3- Voltar pro Menu")
         opc = input("Escolha uma opção: ")
-        if opc == 3:
-            print("Voltando...")
+        if opc == 1:
+            print("Seu Clã é: ",random.choice(clas))
+        elif opc == 2:
+            print("Sua inata é: ",random.choice(inatas))
+        elif opc == 3:
+            print("Retornando...")
         continue
+    
 
     elif opcoes =='3':
         print('ok até a proxima...')
