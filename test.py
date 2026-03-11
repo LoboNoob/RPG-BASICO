@@ -3,7 +3,6 @@ import random
 clas = ["Gojo","Sukuna","Zenin","Yuji","Nenhum"]
 inatas = ["Ilimitado","Santuario","10 sombras","Restrição Celestial","Manipulação De espiritos"]
 
-
 clan_sorteado = None
 inata_sorteada = None
 
@@ -26,65 +25,81 @@ while True:
 
     opcoes = int(input('Escolha uma opção: '))
 
+    # INICIAR JOGO
     if opcoes == 1:
-        print('Iniciando jogo...')
+
+        if clan_sorteado is None or inata_sorteada is None:
+            print("Você precisa roletar seu clã e inata primeiro!")
+            continue
+
         player = {
             "cla": clan_sorteado,
             "inata": inata_sorteada,
             "hp": 100
-            }
+        }
+
         print('Qual o seu nome?')
-        nome = input('')
-        print(f'Muito Prazer,{nome}!, Meu Nome é Geovane')
-        print('e eu sou o desenvolvedor e vou narrar a historia para você.')
+        nome = input()
+
+        print(f'Muito Prazer, {nome}! Meu Nome é Geovane')
+        print('E eu sou o desenvolvedor e vou narrar a história para você.')
         print('Para começar saiba que o rpg é bem basico')
-        print('e a tematica é do anime Jujutsu kaisen')
+        print('E a temática é do anime Jujutsu Kaisen')
         print('Espero que goste :)')
         print('Agora vamos continuar')
+
         print('.')
         print('..')
         print('...')
+
         print('Você nasce em uma vila bem distante!')
         print('Sua vila é bem mediocre, não há muitas pessoas por lá.')
         print('Como você ainda tem dias de vida não há nada para fazer.')
+
         print('Timeskip...')
-        input('Aperte qualquer tecla')
+        input('Aperte ENTER para continuar')
+
         print('Já passou 10 anos e nessa idade é despertado uma inata herdada')
-        print('e como você não tinha noção ainda da sua propria familia')
-        print('Descobrirá tanto seu clâ, quanto sua inata')
-        print('Uma nevoa cobre seu corpo, enquanto seus pais te observam...')
-        print('prosseguir?')
-        input('')
-        print('Entao você e seus pais conseguem ver')
+        print('E como você não tinha noção ainda da sua própria família')
+        print('Descobrirá tanto seu clã quanto sua inata')
+
+        print('Uma névoa cobre seu corpo, enquanto seus pais te observam...')
+        input('Prosseguir...')
+
+        print('Então você e seus pais conseguem ver...')
         print('...')
         print('Portanto agora você definitivamente é')
-        print(f'{nome}, seu clã é: {clan_sorteado}, Sua inata é: {inata_sorteada}')
-        if inata_sorteada == "Restrição Celestial":
-            print('Seus pais te olham com desprezo,nojo,raiva,tristeza,')
-            print('Uma onda de emoções negativas veem deles, por conta da sua inata')
-            print('Pelo que parece sua Inata é detestavel entre todos')
-        elif inata_sorteada == "Ilimitado":
-            print('Seus pais te olham com muito orgulho,felizes,empolgados com oq espera vc')
-            print('Apenas com o seu despertar os chãos se tremem')
+
+        print(f'{nome}, seu clã é: {player["cla"]}, sua inata é: {player["inata"]}')
+
+        # EVENTOS
+
+        if player["inata"] == "Restrição Celestial":
+            print('Seus pais te olham com desprezo, nojo, raiva e tristeza')
+            print('Uma onda de emoções negativas vem deles')
+            print('Pelo que parece sua inata é detestável entre todos')
+
+        elif player["inata"] == "Ilimitado" and player["cla"] == "Gojo":
+            print('Seus pais te olham com muito orgulho')
+            print('O chão começa a tremer')
+            print('O mundo inteiro sente sua chegada')
+            print('O EQUILÍBRIO DO MUNDO MUDOU')
+            print('Você não é uma pessoa qualquer...')
+
+        elif player["inata"] == "Ilimitado":
+            print('Seus pais te olham com orgulho')
+            print('O chão começa a tremer')
             print('Parece que sua inata não é comum...')
-        elif inata_sorteada == "Ilimitado" and clan_sorteado == "Gojo":
-            print('Seus pais te olham com muito orgulho,felizes,empolgados com oq espera vc')
-            print('Apenas com o seu despertar os chãos se tremem')
-            print('O mundo inteiro sente a sua chegada')
-            print('O EQUILIBRIO DO MUNDO MUDOU')
-            print('Você não é Uma pessoa qualquer...')
         else:
-            print('Muito bem, Após o seu despertar')
-            print('Seus pais te colocam em uma escola de treino')
-            print('Para aprender sobre sua inata')
+            print('')
+        input('Aperte qualquer tecla')
+        print('')
 
-
-
-
-
-
+        print("\nFim da demo do RPG :)")
         break
 
+
+    # CUSTOMIZAÇÃO
     elif opcoes == 2:
 
         while True:
@@ -96,8 +111,9 @@ while True:
 
             opc = int(input("Escolha uma opção: "))
 
-            # GIRAR CLÃ
+            # ROLETAR CLÃ
             if opc == 1:
+
                 spins = 3
 
                 while spins > 0:
@@ -114,12 +130,14 @@ while True:
                     print(f'Você ainda tem {spins} giros')
                     girar = input('Deseja girar novamente? (s/n): ').lower()
 
-                    if girar in ['n','2']:
+                    if girar == 'n':
                         print('Voltando ao menu de customização...')
                         break
 
-            # GIRAR INATA
+
+            # ROLETAR INATA
             elif opc == 2:
+
                 spins = 3
 
                 while spins > 0:
@@ -136,17 +154,18 @@ while True:
                     print(f'Você ainda tem {spins} giros')
                     girar = input('Deseja girar novamente? (s/n): ').lower()
 
-                    if girar in ['n','2']:
+                    if girar == 'n':
                         print('Voltando ao menu de customização...')
                         break
 
-            # VOLTAR MENU
+
             elif opc == 3:
                 print("Retornando ao menu principal...")
                 break
 
             else:
                 print("Opção inválida!")
+
 
     elif opcoes == 3:
         print("Saindo do jogo...")
