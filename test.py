@@ -1,6 +1,6 @@
 import random
 
-clas = ["Gojo","Sukuna","Zenin","Yuji","Nenhum"]
+clas = ["Gojo","Ryomen","Zenin","Itadori","Nenhum"]
 inatas = ["Ilimitado","Santuario","10 sombras","Restrição Celestial","Manipulação De espiritos"]
 
 clan_sorteado = None
@@ -45,6 +45,8 @@ while True:
         print('E eu sou o desenvolvedor e vou narrar a história para você.')
         print('Para começar saiba que o rpg é bem basico')
         print('E a temática é do anime Jujutsu Kaisen')
+        print("Só Lembrando quando for um personagem que fale eu usarei -- no começo da fala dele")
+        print("Quando for eu narrando irei apenas escrever normalmente")
         print('Espero que goste :)')
         print('Agora vamos continuar')
 
@@ -63,7 +65,7 @@ while True:
         print('E como você não tinha noção ainda da sua própria família')
         print('Descobrirá tanto seu clã quanto sua inata')
 
-        print('Uma névoa cobre seu corpo, enquanto seus pais te observam...')
+        print('Enquanto seus pais te observam, Uma névoa cobre seu corpo...')
         input('Prosseguir...')
 
         print('Então você e seus pais conseguem ver...')
@@ -93,10 +95,23 @@ while True:
         else:
             print('')
         input('Aperte qualquer tecla')
-        print('')
+        print("Depois de alguns dias se passarem, Você é matriculado na escola Jujutsu")
+        print("Aonde todos os feiticeiros despertados vão para treinar para ficar mais forte e obter mais conhecimento")
+        print("Porém para ser aprovado oficialmente na escola, você precisa passar em um teste.")
+        input("APERTE ENTER")
+        print("Logo você vai até a sala que ocorerrá o teste")
+        print("O examinador já estava te esperando, seu nome é Masamichi Yaga")
+        print(f"-- Muito prazer {nome}! Estou aqui para realizar o seu teste, Vamos começar?")
+        input("")
+        print("Após o inicio do seu teste um Shinigami aparece")
+        print("para resumir O que é um shinigami, são criaturas invocadas por feiticeiros")
+        print("através de energia amaldiçoada para lutar ou realizar tarefas, agindo como familiares")
+        print("--Seu teste é simples, Vença esse shinigami para ser admitido na escola Jujutsu")
+        print("Vale lembrar que esse shinigami muitos tiveram dificuldade em lidar com ele assim que entraram na escola")
+        print("Com exceção é claro de Satoru Gojo")
 
-        print("\nFim da demo do RPG :)")
-        break
+
+        
 
 
     # CUSTOMIZAÇÃO
