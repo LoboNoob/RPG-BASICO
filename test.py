@@ -1,8 +1,8 @@
 import random
 
 # ================= DADOS =================
-clas = ["Gojo","Ryomen","Zenin","Itadori","Nenhum"]
-inatas = ["Ilimitado","Santuario","10 sombras","Restrição Celestial","Manipulação De espiritos"]
+clas = ["Gojo","Ryomen","Zenin","Itadori","Nenhum"] #proximo okkutsu
+inatas = ["Ilimitado","Santuario","10 sombras","Restrição Celestial","Manipulação De espiritos"] # proximo RIKA
 
 clan_sorteado = None
 inata_sorteada = None
@@ -20,9 +20,9 @@ def combate(player, inimigo):
         print(f"Seu HP: {player['hp']} | Energia: {player['energia']}")
         print(f"{inimigo['nome']} HP: {inimigo['hp']}")
 
-        print("\n1- Atacar")
-        print("2- Juntar energia")
-        print("3- Esquivar")
+        print("\n1- Atacar⚔️")
+        print("2- Juntar energia⚡")
+        print("3- Esquivar💨")
 
         acao = input("Escolha: ")
 
@@ -147,7 +147,7 @@ while True:
 
         print('Timeskip...')
         input('Aperte ENTER para continuar')
-
+        print("...")
         print('Já passaram 10 anos e nessa idade você desperta uma inata herdada!')
         print('Como você não tinha noção ainda da sua própria família,')
         print('Descobrirá tanto seu clã quanto sua inata.')
@@ -219,12 +219,14 @@ while True:
 
         print("O shinigami de Masamichi está vindo em sua direção")
         print("Combate iniciando...")
-        combate(player, shinigami_masa)
+        combate(player, shinigami_masa) # função para chamar o combate
 
-
+        #continuação da historia
         print(f"-- Até que você não foi ruim {nome}, Parabens Você está oficialmente na escola Jujutsu!")
         print("...")
+        input("APERTE ENTER")
         print("")
+        print("Você foi levado até os outros calouros para se apresentar")        
         exit()
     # ================= CUSTOMIZAÇÃO =================
     elif opcoes == 2:
